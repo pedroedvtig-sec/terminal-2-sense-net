@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>terminal 2 sense/net</title>
+    <link rel="stylesheet" href="tela2.css">
+</head>
+   <div id="container">
+
+        <div id="painel-mensagens">
+            <p class="mensagem" id="msg1"></p>
+            <p class="mensagem" id="msg2"></p>
+            <p class="mensagem" id="msg3"></p>
+            <button id = "btn_skip_txt" onclick="skipText()">PULAR MENSAGENS</button>
+            
+        </div>
+
+        <div id="painel-status">
+            <p class="status" id="sistema" data-text="SISTEMA: ON"></p>
+            <p class="status" id="intrusao" data-text="INTRUSÃO DETECTADA: NÃO"></p>
+            <p class="status" id="ice" data-text = "NÍVEL DE ICE: 100%"></p>
+        </div>
+
+    </div>
+<body>
+    <script src="tela2.js"></script>
+</body>
+</html>
