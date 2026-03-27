@@ -44,19 +44,23 @@ async function iniciarDigitacao() {
     setInterval(() => {
         document.getElementById("intrusao").setAttribute("data-text", intrusaoAtiva ? "INTRUSÃO DETECTADA: SIM" : "INTRUSÃO DETECTADA: NÃO");
         intrusaoAtiva = !intrusaoAtiva;
-    }, 1000);
+    }, 500);
 
     let sistemaAtivo = true;
     setInterval(() => {
         document.getElementById("sistema").setAttribute("data-text", sistemaAtivo ? "SISTEMA: ON" : "SISTEMA: OFF");
         sistemaAtivo = !sistemaAtivo;
-    }, 1500);
+    }, 300);
 
     let iceLevel = 100;
-    setInterval(() => {
+    const iceStop = setInterval(() => {
         iceLevel = (iceLevel - 1) % 101; // Simula a redução do nível de ICE de 0 a 100
         document.getElementById("ice").setAttribute("data-text", `NÍVEL DE ICE: ${iceLevel}%`);
-    }, 200);
+        if (iceLevel <= 0){
+            clearInterval(iceStop);
+        
+    }
+    }, 100);    
 }
 
 iniciarDigitacao();
