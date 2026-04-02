@@ -58,7 +58,10 @@ async function iniciarDigitacao() {
         document.getElementById("ice").setAttribute("data-text", `NÍVEL DE ICE: ${iceLevel}%`);
         if (iceLevel <= 0){
             clearInterval(iceStop);
-        
+     setTimeout(() => {
+        window.location.href = "../estroboscopicamente/tela3.html";
+    }, 5000);
+
     }
     }, 100);    
 }
